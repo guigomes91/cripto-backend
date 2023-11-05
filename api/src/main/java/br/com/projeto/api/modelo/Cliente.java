@@ -1,5 +1,6 @@
 package br.com.projeto.api.modelo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,12 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long codigo;
 	
+	@Column(name = "nome")
 	private String nome;
+	
+	@Column(name = "idade")
 	private int idade;
+	
+	@Column(name = "cidade")
 	private String cidade;
 }
